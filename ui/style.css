@@ -2,7 +2,7 @@ body {
     font-family: sans-serif;
     margin-top:20px;
     background-image:url("/ui/home-4.gif");
-  
+    background-size:auto;
 }
 
 .center {
