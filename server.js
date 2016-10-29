@@ -17,8 +17,8 @@ app.get('/ui/shouham.jpg', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'shouham.jpg'));
 });
 
-app.get('/ui/home 4.gif', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'home 4.gif'));
+app.get('/ui/home-4.gif', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'home-4.gif'));
 });
 
 
