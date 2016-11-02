@@ -26,3 +26,16 @@ var port = 8080; // Use 8080 for local development because you might already hav
 app.listen(8080, function () {
   console.log(`IMAD course app listening on port ${port}!`);
 });
+
+$(document).ready(function(){
+	/* This code is executed after the DOM has been completely loaded */
+
+	$('nav a,footer a.up').click(function(e){
+
+		// If a link has been clicked, scroll the page to the link's hash target:
+
+		$.scrollTo( this.hash || 0, 1500);
+		e.preventDefault();
+	});
+
+});
