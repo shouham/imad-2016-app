@@ -18,7 +18,7 @@ app.get('/ui/shouham.jpg', function (req, res) {
 });
 
 app.get('/ui/home-4.gif', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'home-4.gif'));
+  res.sendFile(path.join(__dirname, 'ui', 'home-6.gif'));
 });
 
 
