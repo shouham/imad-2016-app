@@ -30,7 +30,14 @@ body {
   margin: 100px auto;
   color: #333;
 }
+.button {
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
 
+    text-decoration: none;
+    color:white;
+}
 .center {
     text-align: center;
 }
