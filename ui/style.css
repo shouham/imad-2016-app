@@ -84,7 +84,7 @@ hr {
 border-top: 1px dashed #21a31f;
 border-bottom: 1px dashed #21a31f;
 }
-p{
+p{font-family: "Comic Sans MS", cursive, sans-serif;
   margin: 1em 0;
 }
 footer{
