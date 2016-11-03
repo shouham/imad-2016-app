@@ -81,3 +81,8 @@ p{
   margin: 1em 0;
 }
 
+.end{
+    text-align:center;
+    padding-bottom:20px;
+    bottom:0px;
+}
