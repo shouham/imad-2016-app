@@ -39,7 +39,8 @@ lp {
 
 lp a{
     display: block;
-    padding: 14px 16px;
+    height:10px;
+    width:20px;
 }
 
 li a {
