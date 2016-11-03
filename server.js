@@ -27,15 +27,13 @@ app.listen(8080, function () {
   console.log(`IMAD course app listening on port ${port}!`);
 });
 
-// $(document).ready(function(){
-// 	/* This code is executed after the DOM has been completely loaded */
+$(document).ready(function(){
 
-// 	$('nav a,footer a.up').click(function(e){
+      var header = $('header'),
+                  btn    = $('button.toggle-nav');
 
-// 		// If a link has been clicked, scroll the page to the link's hash target:
+      btn.on('click', function(){
+            header.toggleClass('active');
+      });
 
-// 		$.scrollTo( this.hash || 0, 1500);
-// 		e.preventDefault();
-// 	});
-
-// });
+});
