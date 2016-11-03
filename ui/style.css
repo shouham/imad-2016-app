@@ -77,10 +77,12 @@ h2{
   text-align: center;
   
 }
-hr {
-    color: #f00;
-background-color: #f00;
-height: 5px;
+div.hr {
+  height: 15px;
+  background: #fff url(hr1.gif) no-repeat scroll center;
+}
+div.hr hr {
+  display: none;
 }
 p{
   margin: 1em 0;
