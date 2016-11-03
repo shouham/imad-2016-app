@@ -25,6 +25,11 @@ app.get('/ui/logo2.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'logo2.png'));
 });
 
+app.get('/ui/logo3.png', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'logo3.png'));
+});
+
+
 app.get('/ui/home-6.gif', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'home-6.gif'));
 });
