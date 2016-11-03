@@ -85,7 +85,11 @@ border: none;
 p{
   margin: 1em 0;
 }
-
+footer{
+     position:absolute;
+   bottom:0;
+   width:100%;
+}
 .end{
     text-align:center;
     padding-bottom:20px;
