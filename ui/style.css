@@ -1,11 +1,10 @@
 
 
 body{
-  font: 400 20px 'Droid Sans', sans-serif;
-  line-height: 1.5em;
-      background-color: #fff;  
-      color: #c0c5ce;
+  font-family: sans-serif;
+  background-image: url("/ui/home-6.gif");
 }
+
 #full-screen-background-image {
   z-index: -999;
   min-height: 100%;
