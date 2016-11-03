@@ -144,9 +144,11 @@ section{
   padding: 3em;
 }
 h1{
-  margin: 1em 0;
+  color: white;
+  font-family: calibri;
   font-size: 40px;
-  line-height: 1.5em;
+  text-align: center;
+  position: absolute;
 }
 p{
   margin: 1em 0;
