@@ -77,10 +77,10 @@ h2{
   text-align: center;
   
 }
-hr{
-    color: #21a31f;
-background-color: #21a31f;
-height: 5px;
+hr {
+height: 10px;
+background: url(hr-stars.png) no-repeat center;
+border: none;
 }
 p{
   margin: 1em 0;
