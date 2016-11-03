@@ -59,8 +59,8 @@ background-color:#4CAF50;
 }
 
 .horizontal_dotted_line{
-  border-bottom: 1px dotted white;
-  width:5px;
+  border-bottom: 20px dotted white;
+  width:10px;
 }
 
 h1{
