@@ -37,6 +37,11 @@ lp {
     float: left;
 }
 
+lp a{
+    display: block;
+    padding: 14px 16px;
+}
+
 li a {
     display: block;
     color: white;
