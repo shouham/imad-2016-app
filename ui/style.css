@@ -78,9 +78,10 @@ h2{
   
 }
 hr {
-color: #21a31f;
-border: 0;
-height: 2px;
+/*color: #21a31f;*/
+/*border: 0;*/
+/*height: 2px;*/
+border-top: 1px dashed #21a31f;
 }
 p{
   margin: 1em 0;
