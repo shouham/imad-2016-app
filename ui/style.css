@@ -78,9 +78,9 @@ h2{
   
 }
 hr {
-height: 10px;
-background: url(hr-stars.png) no-repeat center;
-border: none;
+color: #21a31f;
+background-color: #21a31f;
+height: 5px;
 }
 p{
   margin: 1em 0;
