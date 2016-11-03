@@ -4,6 +4,8 @@ body{
   font-family: sans-serif;
   background-image: url("/ui/home-6.gif");
   background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-size: cover;
 }
 
 #full-screen-background-image {
