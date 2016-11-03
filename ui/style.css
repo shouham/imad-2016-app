@@ -50,7 +50,7 @@ header ul.nav li a{
     cursor: default;
       -webkit-transition: all 0.25s ease;
     -moz-transition: all 0.25s ease;}
-  a:hover,li:hover{
+  header ul.nav li:hover{
     color: #fff;
         background-color: #222b2f;
   }
