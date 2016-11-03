@@ -79,8 +79,8 @@ h2{
 }
 hr {
 color: #21a31f;
-background-color: #21a31f;
-height: 5px;
+border: 0;
+height: 2px;
 }
 p{
   margin: 1em 0;
