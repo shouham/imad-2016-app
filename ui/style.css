@@ -12,6 +12,17 @@ body{
       background-color: #fff;  
       color: #c0c5ce;
 }
+#full-screen-background-image {
+  z-index: -999;
+  min-height: 100%;
+  min-width: 1024px;
+  width: 100%;
+  height: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
 
 /* Style for header */
 
@@ -38,12 +49,11 @@ header ul.nav li a{
       text-align: center;
     cursor: default;
       -webkit-transition: all 0.25s ease;
-    -moz-transition: all 0.25s ease;
-  &:hover{
+    -moz-transition: all 0.25s ease;}
+  header ul.nav hover{
     color: #fff;
         background-color: #222b2f;
   }
-}
 
 @media screen and (max-width: 600px){
     header ul.nav li{
