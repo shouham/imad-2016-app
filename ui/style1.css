@@ -348,11 +348,23 @@ aside:hover ul li:nth-child(3) {
 nav {    
   display: block;
   text-align: center;
+
+
 }
 nav ul {
   margin: 0;
   padding:0;
   list-style: none;
+}
+.nav b {
+  display:block; 
+  background: #111; 
+  color: #fff; 
+  
+  padding: 0.8em 1.8em;
+  
+  /*text-shadow: 0 -1px 0 #000;*/
+  position: relative;
 }
 .nav a {
   display:block; 
@@ -362,11 +374,12 @@ nav ul {
   padding: 0.8em 1.8em;
   text-transform: uppercase;
   font-size: 80%;
-  letter-spacing: 2px;
+  letter-spacing: 10px;
   /*text-shadow: 0 -1px 0 #000;*/
   position: relative;
 }
 .nav{  
+
   vertical-align: top; 
   display: inline-block;
   /*box-shadow: */
@@ -377,6 +390,7 @@ nav ul {
   border-radius:6px;
 }
 .nav li {
+
   position: relative;
 }
 .nav > li { 
