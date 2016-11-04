@@ -1,5 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:300,400,600);
 .snip1336 {
+    border-radius:25px;
   font-family: 'Roboto', Arial, sans-serif;
   position: relative;
   float: left;
@@ -20,6 +21,7 @@
 .snip1336 * {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+  
   -webkit-transition: all 0.25s ease;
   transition: all 0.25s ease;
 }
