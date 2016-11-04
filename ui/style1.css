@@ -349,7 +349,7 @@ nav {
   display: block;
   text-align: center;
 }
-nav ul {border-radius: 10px;
+nav ul:a {border-radius: 10px;
     list-style-type: none;
     margin: -7px;
     padding: 0px;
