@@ -345,7 +345,7 @@ aside:hover ul li:nth-child(3) {
   }
 }
 
-ul {
+u2 {
     border-radius: 10px;
     list-style-type: none;
     margin: -25px;
@@ -355,7 +355,7 @@ ul {
     position: relative;
 }
 
-li {
+lm {
     float: right;
 }
 
@@ -368,7 +368,7 @@ lp b{padding: 10px 10px;
    
 }
 
-li a {
+lm a {
     display: block;
     color: white;
     text-align: center;
