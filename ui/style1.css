@@ -367,7 +367,7 @@ nav ul {
   /*text-shadow: 0 -1px 0 #000;*/
   position: relative;
 }
-b:hover:not(.active) {
+.nav > b:not(.active) {
     /*background-color: #111;*/
 }
 
