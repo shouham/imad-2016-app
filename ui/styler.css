@@ -4,8 +4,8 @@
   position: relative;
   float: left;
   overflow: hidden;
-  /*margin: 10px 1%;*/
-  margin:auto;
+  margin: 30px 1%;
+ 
   min-width: 230px;
   max-width: 315px;
   width: 100%;
