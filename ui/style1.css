@@ -455,3 +455,17 @@ nav ul {
   border-right-color: orange;
   right: 10px; 
 }
+p1{font-family: "Comic Sans MS", cursive, sans-serif;
+color:black;
+  /*margin: 1em 0;*/
+}
+footer{
+     position:absolute;
+   bottom:-5px;
+   width:100%;
+}
+.end{
+    text-align:center;
+    padding-bottom:20px;
+    bottom:0px;
+}
