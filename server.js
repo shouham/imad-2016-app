@@ -33,6 +33,10 @@ app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
 });
 
+app.get('/ui/styler.css', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'styler.css'));
+});
+
 app.get('/ui/style1.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style1.css'));
 });
