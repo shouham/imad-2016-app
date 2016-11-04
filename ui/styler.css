@@ -4,7 +4,8 @@
   position: relative;
   float: left;
   overflow: hidden;
-  margin: 10px 1%;
+  /*margin: 10px 1%;*/
+  margin auto;
   min-width: 230px;
   max-width: 315px;
   width: 100%;
@@ -12,6 +13,7 @@
   text-align: left;
   line-height: 1.4em;
   background-color: #141414;
+  
 }
 .snip1336 * {
   -webkit-box-sizing: border-box;
