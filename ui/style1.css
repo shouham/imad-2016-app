@@ -389,10 +389,10 @@ nav ul {
 }
 .nav > li:hover, 
 .nav > li:hover > a { 
-  border-bottom-color: orange;
+  border-bottom-color: #21a31f;
 }
 .nav li:hover > a { 
-  color:orange; 
+  color:#21a31f; 
 }
 .nav > li:first-child { 
   border-radius: 4px 0 0 4px;
@@ -443,7 +443,7 @@ nav ul {
 }
 .nav > li:hover > a:first-child:nth-last-child(2):before {
   border: 5px solid transparent; 
-  border-bottom-color: orange; 
+  border-bottom-color: #21a31f; 
   margin-top:-5px
 }
 .nav li li > a:first-child:nth-last-child(2):before {  
@@ -452,7 +452,7 @@ nav ul {
 }
 .nav li li:hover > a:first-child:nth-last-child(2):before {
   border: 5px solid transparent; 
-  border-right-color: orange;
+  border-right-color: #21a31f;
   right: 10px; 
 }
 p1{font-family: "Comic Sans MS", cursive, sans-serif;
