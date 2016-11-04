@@ -368,7 +368,7 @@ lp b{padding: 10px 10px;
    
 }
 
-lm a {
+lm c {
     display: block;
     color: white;
     text-align: center;
@@ -376,7 +376,7 @@ lm a {
     text-decoration: none;
 }
 
-a:hover:not(.active) {
+c:hover:not(.active) {
     background-color: #111;
 }
 
