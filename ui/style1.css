@@ -367,6 +367,20 @@ nav ul {
   /*text-shadow: 0 -1px 0 #000;*/
   position: relative;
 }
+b:hover:not(.active) {
+    /*background-color: #111;*/
+}
+
+.active {
+border-bottom-color: #21a31f;
+}
+/*b:hover:not(.active) {*/
+/*    background-color: #111;*/
+/*}*/
+
+/*.active {*/
+/*background-color:#4CAF50;*/
+/*}*/
 .nav a {
   display:block; 
   background: #111; 
