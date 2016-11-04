@@ -13,6 +13,18 @@ app.get('/ui/resume.html', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'resume.html'));
 });
 
+app.get('/ui/blogsubmit.html', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'blogsubmit.html'));
+});
+
+app.get('/ui/blogview.html', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'blogview.html'));
+});
+
+app.get('/ui/contact.html', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'contact.html'));
+});
+
 app.get('/ui/port.html', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'port.html'));
 });
