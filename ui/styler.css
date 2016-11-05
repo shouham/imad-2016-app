@@ -97,7 +97,8 @@
 }
 /* Demo purposes only */
 body {
-  background-color: #212121;
+  /*background-color: #212121;*/
+  background-image: url("https://raw.githubusercontent.com/shouham/imad-2016-app/master/ui/home-6.gif");
 }
 
 hr {
