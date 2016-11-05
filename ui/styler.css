@@ -99,6 +99,9 @@
 body {
   /*background-color: #212121;*/
   background-image: url("https://raw.githubusercontent.com/shouham/imad-2016-app/master/ui/home-6.gif");
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-size: cover;
 }
 
 hr {
