@@ -41,7 +41,7 @@ function createTemplate(data){
 }
 
     
-app.get('/articles',function(req,res){
+app.get('/articles',function(req,res,next){
     //"SELECT * FROM article WHERE title = $1",[req.params.articleName]
     // var articleName=req.params.articleName;
     pool.query("SELECT * FROM article ",function(err,result){
@@ -49,9 +49,10 @@ app.get('/articles',function(req,res){
             res.status(500).send(err.toString());
         }
              else{
-                var articleData=result.rows[1];
+                var articleData=result.rows[0];
                 res.send(createTemplate(articleData));
             }
+            next();
         });
     
 });
