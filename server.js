@@ -44,7 +44,7 @@ function createTemplate(data){
 app.get('/articles',function(req,res,next){
     //"SELECT * FROM article WHERE title = $1",[req.params.articleName]
     // var articleName=req.params.articleName;
-    pool.query("SELECT * FROM article ",function(err,result){
+    pool.query("SELECT * FROM article",function(err,result){
         if(err){
             res.status(500).send(err.toString());
         }
@@ -57,17 +57,17 @@ app.get('/articles',function(req,res,next){
     
 });
 
-app.get('/articles/:articleName',function(req,res){
+app.get('/articles/:id',function(req,res){
     //"SELECT * FROM article WHERE title = $1",[req.params.articleName]
     // var articleName=req.params.articleName;
-    pool.query("SELECT * FROM article WHERE title='"+req.params.articleName+"'",function(err,result){
+    pool.query("SELECT * FROM article WHERE id =1",function(err,result){
         if(err){
             res.status(500).send(err.toString());
         }else {
             if (result.rows.length === 0){
                 res.status(404).send('Article not found');
             } else{
-                var articleData=result.rows[1];
+                var articleData=result.rows[0];
                 res.send(createTemplate(articleData));
             }
         }
