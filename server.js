@@ -31,10 +31,10 @@ app.get('/test-db',function(req,res){
 });
 
 function createTemplate(data){
-    var title=data.body.title;
-    var date=data.body.date;
-    var heading=data.body.heading;
-    var content=data.body.content;
+    var title=data.title;
+    var date=data.date;
+    var heading=data.heading;
+    var content=data.content;
     
     var htmlTemplate = '<html><head><title>${title}</title><meta name="viewport" content="width=device-width,initial-scale=1"/>        <link href="/ui/style.css" rel="stylesheet"/></head><body><div class="container"><div><a href="/">Home</a></div><hr/><h3>${heading}</h3><div>${date}</div><div>${content}</div></div></body></html>';
     return htmlTemplate;
@@ -60,7 +60,7 @@ app.get('/articles',function(req,res,next){
 app.get('/articles/:id',function(req,res,next){
     //"SELECT * FROM article WHERE title = $1",[req.params.articleName]
     // var articleName=req.params.articleName;
-    pool.query("SELECT * FROM `article` WHERE `id` = 1",function(err,result){
+    pool.query("SELECT * FROM article WHERE title = $1",function(err,result){
         if(err){
             res.status(500).send(err.toString());
         }else {
@@ -69,8 +69,8 @@ app.get('/articles/:id',function(req,res,next){
             } else{
                 var articleData=result.rows[0];
                 res.send(createTemplate(articleData));
+                next();
             }
-            next();
         }
     });
     
