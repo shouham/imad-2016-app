@@ -40,6 +40,22 @@ function createTemplate(data){
     return htmlTemplate;
 }
 
+    
+app.get('/articles',function(req,res){
+    //"SELECT * FROM article WHERE title = $1",[req.params.articleName]
+    // var articleName=req.params.articleName;
+    pool.query("SELECT * FROM article ",function(err,result){
+        if(err){
+            res.status(500).send(err.toString());
+        }
+             else{
+                var articleData=result.rows[1];
+                res.send(createTemplate(articleData));
+            }
+        });
+    
+});
+
 app.get('/articles/:articleName',function(req,res){
     //"SELECT * FROM article WHERE title = $1",[req.params.articleName]
     // var articleName=req.params.articleName;
