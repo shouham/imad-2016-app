@@ -46,7 +46,7 @@ app.get('/articles/:articleName',function(req,res){
             if (result.rows.length === 0){
                 res.status(404).send('Article not found');
             } else{
-                res.status(200).send('Status is okay');
+                res.status(200);
                 var data = {title: result.rows[0].title, date: result.rows[0].date, content: result.rows[0].content, heading: result.rows[0].heading}; 
                 res.send(data);
             }
