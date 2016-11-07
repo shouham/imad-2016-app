@@ -41,10 +41,10 @@ function createTemplate(titles,dates,headings,contents){
 }
 
 
-app.get('/articles/:id',function(req,res){
+app.get('/articles',function(req,res){
     //"SELECT * FROM article WHERE title = $1",[req.params.articleName]
     // var articleName=req.params.articleName;
-    pool.query("SELECT * FROM article  WHERE id = $1",[req.params.id],function(err,result){
+    pool.query("SELECT * FROM article" ,function(err,result){
         if(err){
             res.status(500).send(err.toString());
         }else {
