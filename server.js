@@ -31,7 +31,7 @@ app.get('/test-db',function(req,res){
 });
 
 function createTemplate(titles,dates,headings,contents){
-    var title=titles;
+    var title=title.titles;
     var date=dates;
     var heading=headings;
     var content=contents;
