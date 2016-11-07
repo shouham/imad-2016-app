@@ -30,11 +30,11 @@ app.get('/test-db',function(req,res){
     }); 
 });
 
-function createTemplate(title,date,heading,content){
-    var title=title;
-    var date=date;
-    var heading=heading;
-    var content=content;
+function createTemplate(titles,dates,headings,contents){
+    var title=titles;
+    var date=dates;
+    var heading=headings;
+    var content=contents;
     
     var htmlTemplate = '<html><head><title>${title}</title><meta name="viewport" content="width=device-width,initial-scale=1"/>        <link href="/ui/style.css" rel="stylesheet"/></head><body><div class="container"><div><a href="/">Home</a></div><hr/><h3>${heading}</h3><div>${date}</div><div>${content}</div></div></body></html>';
     return htmlTemplate;
@@ -48,13 +48,13 @@ app.get('/articles/:id',function(req,res,next){
         if(err){
             res.status(500).send(err.toString());
         }else {
-            if (result.length === 0){
+            if (result.rows.length === 0){
                 res.status(404).send('Article not found');
             } else{
-                var title =result[0].title;
-                var date = result[0].date;
-                var heading = result[0].heading;
-                var content = result[0].content;
+                var title =result.rows[0].title;
+                var date = result.rows[0].date;
+                var heading = result.rows[0].heading;
+                var content = result.rows[0].content;
                 res.send(createTemplate(title,date,heding,content));
                 next();
             }
