@@ -32,14 +32,9 @@ app.get('/test-db',function(req,res){
 var createTemplate = function (data){
     var heading = data.heading;
     var title = data.title;
-    var htmlTemplate =  '<html>'
-    '<head>'
-        '<title>'
-            '${title}'
-        '</title>'
-        '<meta name="viewport" content="width=device-width,initial-scale=1"/><link href="/ui/style.css" rel="stylesheet"/></head><body><div class="container"><div><a href="/">Home</a></div><hr/><h3>${heading}</h3><div>${date}</div><div>${content}</div></div></div></body></html>';
+    var htmlTemplate =  '<html><head><title>${title}</title><meta name="viewport" content="width=device-width,initial-scale=1"/><link href="/ui/style.css" rel="stylesheet"/></head><body><div class="container"><div><a href="/">Home</a></div><hr/><h3>${heading}</h3><div>${date}</div><div>${content}</div></div></div></body></html>';
     return htmlTemplate;
-}
+};
 
 app.get('/articles',function(req,res){
     //"SELECT * FROM article WHERE title = $1",[req.params.articleName]
@@ -52,8 +47,7 @@ app.get('/articles',function(req,res){
                 res.status(404).send('Article not found');
             } else{
                var data = {title: result.rows[0].title, date: result.rows[0].date, content: result.rows[0].content, heading: result.rows[0].heading}; 
-                /**res.send(createTemplate(data));*/
-                res.send(data);
+                res.send(createTemplate(data));
             }
         }
     });
