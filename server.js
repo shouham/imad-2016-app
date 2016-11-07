@@ -50,7 +50,7 @@ app.get('/articles',function(req,res){
                 this.data = data;});
                  
                  
-                res.send(CreateTemplate);
+                res.send(CreateTemplate());
                /** var data = {title: result.rows[0].title, date: result.rows[0].date, content: result.rows[0].content, heading: result.rows[0].heading}; 
                 res.send(data);*/
             }
