@@ -52,7 +52,8 @@ app.get('/articles',function(req,res){
                 res.status(404).send('Article not found');
             } else{
                var data = {title: result.rows[0].title, date: result.rows[0].date, content: result.rows[0].content, heading: result.rows[0].heading}; 
-                res.send(createTemplate(data));
+                /**res.send(createTemplate(data));*/
+                res.send(data);
             }
         }
     });
