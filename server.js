@@ -29,9 +29,9 @@ app.get('/test-db',function(req,res){
         }
     }); 
 });
-var createTemplate = function (data){
-    var heading = data.heading;
-    var title = data.title;
+var createTemplate = function (datas){
+    var heading = datas.heading;
+    var title = datas.title;
     var htmlTemplate =  '<html><head><title>${title}</title><meta name="viewport" content="width=device-width,initial-scale=1"/><link href="/ui/style.css" rel="stylesheet"/></head><body><div class="container"><div><a href="/">Home</a></div><hr/><h3>${heading}</h3><div>${date}</div><div>${content}</div></div></div></body></html>';
     return htmlTemplate;
 };
