@@ -29,14 +29,14 @@ app.get('/test-db',function(req,res){
         }
     }); 
 });
-
+/**
 function createTemplate(titles,dates,headings,contents){
     
     
     var htmlTemplate =  '<html ng-app = "shouham"><head><title>{{title}}</title><meta name="viewport" content="width=device-width,initial-scale=1"/><link href="/ui/style.css" rel="stylesheet"/></head><body><div class="container" ng-controller="controller as C"><div><a href="/">Home</a></div><hr/><div ng-repeat ="data in C.data"><h3>{{data.headings}}</h3><div>{data.date}</div><div>{{data.content}</div></div></div><script src="angular/angular.min.js"></script><script></script></body></html>';
     return htmlTemplate;
 }
-
+*/
 
 app.get('/articles',function(req,res){
     //"SELECT * FROM article WHERE title = $1",[req.params.articleName]
@@ -48,8 +48,12 @@ app.get('/articles',function(req,res){
             if (result.rows.length === 0){
                 res.status(404).send('Article not found');
             } else{
-            var data = {title: result.rows[0].title, date: result.rows[0].date, content: result.rows[0].content, heading: result.rows[0].heading}; 
-                /**var title =result.rows[0].title;
+                var data = {title: result.rows[0].title, date: result.rows[0].date, content: result.rows[0].content, heading: result.rows[0].heading}; 
+                /**
+                 var htmlTemplate =  '<html ng-app = "shouham"><head><title>{{title}}</title><meta name="viewport" content="width=device-width,initial-scale=1"/><link href="/ui/style.css" rel="stylesheet"/></head><body><div class="container" ng-controller="controller as C"><div><a href="/">Home</a></div><hr/><div ng-repeat ="data in C.data"><h3>{{data.headings}}</h3><div>{data.date}</div><div>{{data.content}</div></div></div><script src="angular/angular.min.js"></script><script>var app = angular.module('shouham',[]);app.controller('controller',function(){var data = {title: result.rows[0].title, date: result.rows[0].date, content: result.rows[0].content, heading: result.rows[0].heading}; this.data = data; });</script></body></html>';
+                 return htmlTemplate;
+            
+                var title =result.rows[0].title;
                 var date = result.rows[0].date;
                 var heading = result.rows[0].heading;
                 var content = result.rows[0].content;
