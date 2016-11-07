@@ -47,6 +47,7 @@ app.get('/articles',function(req,res){
             } else{
                var data = {title: result.rows[0].title, date: result.rows[0].date, content: result.rows[0].content, heading: result.rows[0].heading}; 
                 res.send(data.date);
+                res.send(data.title);
             }
         }
     });
