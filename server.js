@@ -1,4 +1,4 @@
-var express = require('express');
+ var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
 var Pool=require('pg').Pool;
@@ -41,7 +41,7 @@ function createTemplate(titles,dates,headings,contents){
 }
 
 
-app.get('/articles/:id',function(req,res,next){
+app.get('/articles/:id',function(req,res){
     //"SELECT * FROM article WHERE title = $1",[req.params.articleName]
     // var articleName=req.params.articleName;
     pool.query("SELECT * FROM article  WHERE id = $1",[req.params.id],function(err,result){
@@ -56,7 +56,6 @@ app.get('/articles/:id',function(req,res,next){
                 var heading = result.rows[0].heading;
                 var content = result.rows[0].content;
                 res.send(createTemplate(title,date,heding,content));
-                next();
             }
         }
     });
