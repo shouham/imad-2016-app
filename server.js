@@ -29,7 +29,10 @@ app.get('/test-db',function(req,res){
         }
     }); 
 });
-
+var createTemplate = function (){
+    var htmlTemplate =  '<html ng-app = "shouham"><head><title>{{title}}</title><meta name="viewport" content="width=device-width,initial-scale=1"/><link href="/ui/style.css" rel="stylesheet"/></head><body><div class="container" ng-controller="SHcontroller as C"><div><a href="/">Home</a></div><hr/><div ng-repeat ="data in C.data"><h3>{{data.heading}}</h3><div>{data.date}</div><div>{{data.content}</div></div></div><script src="angular/angular.min.js"></script></body></html>';
+    return htmlTemplate;
+}
 
 app.get('/articles',function(req,res){
     //"SELECT * FROM article WHERE title = $1",[req.params.articleName]
@@ -45,9 +48,9 @@ app.get('/articles',function(req,res){
                 var app = angular.module('shouham',[]);app.controller('SHcontroller',function(){
                 var data = {title: result.rows[0].title, date: result.rows[0].date, content: result.rows[0].content, heading: result.rows[0].heading}; 
                 this.data = data;});
-                 var htmlTemplate =  '<html ng-app = "shouham"><head><title>{{title}}</title><meta name="viewport" content="width=device-width,initial-scale=1"/><link href="/ui/style.css" rel="stylesheet"/></head><body><div class="container" ng-controller="SHcontroller as C"><div><a href="/">Home</a></div><hr/><div ng-repeat ="data in C.data"><h3>{{data.heading}}</h3><div>{data.date}</div><div>{{data.content}</div></div></div><script src="angular/angular.min.js"></script></body></html>';
                  
-                res.send(htmlTemplate);
+                 
+                res.send(CreateTemplate);
                /** var data = {title: result.rows[0].title, date: result.rows[0].date, content: result.rows[0].content, heading: result.rows[0].heading}; 
                 res.send(data);*/
             }
