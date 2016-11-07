@@ -55,7 +55,7 @@ app.get('/articles',function(req,res){
                 var date = result.rows[0].date;
                 var heading = result.rows[0].heading;
                 var content = result.rows[0].content;
-                res.send(JSON.stringify(results.rows.date));/**
+                res.send(JSON.stringify(results.rows[0].date));/**
                 res.send(createTemplate(title,date,heading,content));*/
             }
         }
