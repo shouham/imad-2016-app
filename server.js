@@ -33,7 +33,7 @@ app.get('/test-db',function(req,res){
 function createTemplate(titles,dates,headings,contents){
     
     
-    var htmlTemplate =  '<html ng-app = "shouham"><head><title>{{title}}</title><meta name="viewport" content="width=device-width,initial-scale=1"/>        <link href="/ui/style.css" rel="stylesheet"/></head><body><div class="container" ng-controller="controller as C"><div><a href="/">Home</a></div><hr/><div ng-repeat ="data in C.data"><h3>{{data.headings}}</h3><div>{data.date}</div><div>{{data.content}</div></div></div><script src="angular/angular.min.js"></script><script>var app = angular.module('shouham',[]).controller('controller',function(){});</script></body></html>';
+    var htmlTemplate =  '<html ng-app = "shouham"><head><title>{{title}}</title><meta name="viewport" content="width=device-width,initial-scale=1"/><link href="/ui/style.css" rel="stylesheet"/></head><body><div class="container" ng-controller="controller as C"><div><a href="/">Home</a></div><hr/><div ng-repeat ="data in C.data"><h3>{{data.headings}}</h3><div>{data.date}</div><div>{{data.content}</div></div></div><script src="angular/angular.min.js"></script><script></script></body></html>'
     return htmlTemplate;
 }
 
